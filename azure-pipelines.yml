@@ -22,13 +22,13 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/pipeline-practice'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/pipline-practice'
     environmentServiceNameAzureRM: 'terraform-service-connection'
 
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/pipeline-practice'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/pipline-practice'
     commandOptions: '-auto-approve'
     environmentServiceNameAzureRM: 'terraform-service-connection'
