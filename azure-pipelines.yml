@@ -8,6 +8,7 @@ steps:
     terraformVersion: 'latest'
 
 - task: TerraformTask@5
+  displayName: terraform init
   inputs:
     provider: 'azurerm'
     command: 'init'
@@ -19,6 +20,7 @@ steps:
     backendAzureRmKey: 'sandhya.tfstate'
 
 - task: TerraformTask@5
+  displayName: terraform plan
   inputs:
     provider: 'azurerm'
     command: 'plan'
@@ -26,6 +28,7 @@ steps:
     environmentServiceNameAzureRM: 'terraform-service-connection'
 
 - task: TerraformTask@5
+  displayName: terraform apply
   inputs:
     provider: 'azurerm'
     command: 'apply'
